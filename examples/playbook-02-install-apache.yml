@@ -1,0 +1,8 @@
+---
+- name: install Apache
+  hosts: vm1
+  tasks:
+    - name: install Apache webserver on Ubuntu
+      apt:
+          name: apache2
+          state: latest

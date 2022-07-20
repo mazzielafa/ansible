@@ -1,0 +1,14 @@
+---
+- name: Configure SSH
+  hosts: webserver
+  tasks:
+  	- name: Ensure ClientAliveInterval is set to 15
+      lineinfile:
+      	path: /etc/ssh/sshd_config
+        regexp: "^ClientAliveInterval"
+        line: ClientAliveInterval=15
+    - name: Ensure ClientAliveCountMax is set to 4
+      lineinfile:
+      	path: /etc/ssh/sshd_config
+        regexp: "^ClientAliveCountMax"
+        line: ClientAliveCountMax=4

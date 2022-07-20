@@ -1,0 +1,11 @@
+---
+- name: Ansible variables in practice
+  hosts: webserver
+  vars:
+  	greetings: Hello World!
+    topic: Ansible Playbooks
+    
+  tasks:
+  - name: Ansible basic variable example
+    debug:
+    	msg: "{{ greetings }}, let's learn {{ topic }}."

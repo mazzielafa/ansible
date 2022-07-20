@@ -1,0 +1,12 @@
+---
+- name: Create new users in remote machine
+  hosts: 173.82.120.115
+  tasks:
+    - name: Create new user Alice
+      user:
+        name: '{{ item }}'
+        state: present
+      loop:
+        - alice
+        - patric
+        - tom

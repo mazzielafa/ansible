@@ -1,0 +1,11 @@
+---
+- name: Ansible when-or conditional statement
+  hosts: all
+  tasks:
+  	- name: "create a directory if it doesn't exist"
+      file:
+      	path: $HOME/data
+        state: directory
+        mode: "0777"
+        
+      when: ansible_os_family == "Debian" or ansible_os_family == "RedHat"

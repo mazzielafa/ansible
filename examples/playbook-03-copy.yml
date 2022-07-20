@@ -1,0 +1,11 @@
+---
+- name: Ansible copy module example
+  hosts: webserver
+  tasks:
+  	- name: Copy files from control node to remote node
+      copy:
+      	src: /home/user/Documents/sales_report.txt
+        dest: /tmp/reports/
+        owner: cherry
+        group: cherry
+        mode 0644

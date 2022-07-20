@@ -1,0 +1,16 @@
+---
+- name: Create new usersr on remote machine
+  hosts: 173.82.120.115
+  tasks:
+    - name: Create new user Alice
+      user:
+        name: alice
+        state: present
+    - name: Create new user Patric
+      user:
+        name: patric
+        state: present
+    - name: Create new user Tom
+      user:
+        name: tom
+        state: present

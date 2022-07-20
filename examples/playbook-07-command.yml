@@ -1,0 +1,9 @@
+---
+- name: Execute commands on remote targets
+  hosts: webserver
+  tasks:
+  	- name: Execute the uptime command
+      command: "uptime"
+      
+    - name: Execute the date command
+      command: "date"
