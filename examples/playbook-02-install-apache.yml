@@ -1,6 +1,6 @@
 ---
 - name: install Apache
-  hosts: vm1
+  hosts: all
   tasks:
     - name: install Apache webserver on Ubuntu
       apt:
